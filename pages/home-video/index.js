@@ -1,6 +1,8 @@
 // pages/home-video/index.js
 
-import { getTopMV } from '../../service/api_video'
+import {
+    getTopMV
+} from '../../service/api_video'
 
 Page({
     /**
@@ -36,8 +38,12 @@ Page({
         }
 
         // 设置数据
-        this.setData({ topMVs: newData })
-        this.setData({ hasMore: res.hasMore })
+        this.setData({
+            topMVs: newData
+        })
+        this.setData({
+            hasMore: res.hasMore
+        })
         // 关闭小圆圈
         wx.hideNavigationBarLoading()
         // 数据来了以后，就停掉动画
@@ -46,6 +52,15 @@ Page({
         }
     },
 
+    // 封装事件处理的方法
+    handleVideoItemClick: function (event) {
+        // 获取id
+        const id = event.currentTarget.dataset.item.id
+        // 页面跳转
+        wx.navigateTo({
+            url: `/pages/detail-video/index?id=${id}`,
+        })
+    },
 
     // 其他的生命周期回调函数
     onPullDownRefresh: async function () {
