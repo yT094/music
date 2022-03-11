@@ -14,10 +14,10 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/home-video/index",
+          "pathName": "pages/home-music/index",
           "query": "",
-          "launchMode": "default",
           "scene": null,
+          "launchMode": "default",
           "partialCompile": {
             "enabled": false,
             "pages": [
@@ -29,8 +29,8 @@
           "name": "",
           "pathName": "pages/home-video/index",
           "query": "",
-          "scene": null,
           "launchMode": "default",
+          "scene": null,
           "partialCompile": {
             "enabled": false,
             "pages": [
