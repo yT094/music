@@ -1,31 +1,44 @@
 {
-    "setting": {},
-    "condition": {
-        "plugin": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "",
-                    "pathName": "pages/home-video/index",
-                    "query": "",
-                    "scene": null,
-                    "launchMode": "default",
-                    "partialCompile": {
-                        "enabled": false,
-                        "pages": [
-                            "pages/home-video/index"
-                        ]
-                    }
-                }
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/home-video/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/home-video/index"
             ]
+          }
+        },
+        {
+          "name": "",
+          "pathName": "pages/home-video/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default",
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/home-video/index"
+            ]
+          }
         }
+      ]
     }
+  }
 }
