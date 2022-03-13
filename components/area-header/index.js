@@ -12,7 +12,7 @@ Component({
       type: String,
       value: "更多"
     },
-    showRight: {
+    showMore: {
       type: Boolean,
       value: true
     }

@@ -27,5 +27,5 @@
 
 <!-- 3.推荐歌曲 -->
 <view class="recommend-song">
-  <area-header title="推荐歌曲"></area-header>
+  <area-header title="推荐歌曲" showMore="{{false}}"><text>哈哈哈</text></area-header>
 </view>

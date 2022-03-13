@@ -11,14 +11,14 @@
   font-weight: 700;
 }
 
-.header .right {
+.header .default {
   display: flex;
   align-items: center;
   font-size: 28rpx;
   color: #777;
 }
 
-.header .right .icon {
+.header .default .icon {
   width: 50rpx;
   height: 50rpx;
 }
