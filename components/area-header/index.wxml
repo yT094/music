@@ -3,7 +3,7 @@
   <view class="title">{{title}}</view>
   <view class="right">
     <view class="slot"><slot></slot></view>
-    <view class="default" wx:if="{{showMore}}">
+    <view class="default">
       <text>{{rightText}}</text>
       <image class="icon" src="/assets/images/icons/arrow-right.png"></image>
     </view>

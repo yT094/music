@@ -11,8 +11,13 @@
   font-weight: 700;
 }
 
-.header .default {
+/* 伪类选择器和连接选择器 */
+.header .slot:empty + .default {
   display: flex;
+}
+
+.header .default {
+  display: none;
   align-items: center;
   font-size: 28rpx;
   color: #777;
