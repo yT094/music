@@ -1,31 +1,32 @@
 {
-    "pages": [
-        "pages/home-music/index",
-        "pages/home-video/index",
-        "pages/detail-video/index"
-    ],
-    "tabBar": {
-        "list": [
-        {
-            "pagePath": "pages/home-music/index",
-            "text": "音乐",
-            "iconPath": "assets/images/tabbar/music_normal.png",
-            "selectedIconPath": "assets/images/tabbar//music_active.png"
-        },
-        {
-            "pagePath": "pages/home-video/index",
-            "text": "视频",
-            "iconPath": "assets/images/tabbar/video_normal.png",
-            "selectedIconPath": "assets/images/tabbar/video_active.png"
-        }
+  "pages": [
+    "pages/home-music/index",
+    "pages/home-video/index",
+    "pages/detail-video/index",
+    "pages/detail-search/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home-music/index",
+        "text": "音乐",
+        "iconPath": "assets/images/tabbar/music_normal.png",
+        "selectedIconPath": "assets/images/tabbar//music_active.png"
+      },
+      {
+        "pagePath": "pages/home-video/index",
+        "text": "视频",
+        "iconPath": "assets/images/tabbar/video_normal.png",
+        "selectedIconPath": "assets/images/tabbar/video_active.png"
+      }
     ]
-    },
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
