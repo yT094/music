@@ -2,6 +2,11 @@
 .menu-list {
   /* 不换行 */
   white-space: nowrap;
+  /* vw: viewport width,「视口范围」宽度或「可见范围」宽度 */
+  width: 100vw;
+  /* 微调样式 */
+  position: relative;
+  left: -20rpx;
 }
 
 .menu-item {
@@ -15,3 +20,7 @@
   /* item之间的距离 */
   margin-left: 20rpx;
 }
+
+.menu-item:last-of-type {
+  margin-right: 20rpx;
+} 
