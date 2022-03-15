@@ -13,9 +13,8 @@
   /* 解决不同机型中，item不对齐的问题：统一顶部对齐 */
   vertical-align: top;
   
-  width: 200rpx;
-  height: 200rpx;
-  background-color: red;
+  width: 220rpx;
+
   /* item之间的距离 */
   margin-left: 20rpx;
 }
