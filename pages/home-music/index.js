@@ -17,7 +17,8 @@ Page({
         swiperHeight: 0,
         recommendSongs: [],
         hotSongMenu: [],
-        recommendSongMenu: []
+        recommendSongMenu: [],
+        rankings: { 0: {}, 2:{}, 3:{} },
     },
 
     /**
@@ -36,6 +37,12 @@ Page({
             const recommendSongs = res.tracks.slice(0, 6)
             this.setData({ recommendSongs })
         })
+        rankingStore.onState("newRanking", this.getRankingHandle(0))
+        rankingStore.onState("originRanking", this.getRankingHandle(2))
+        rankingStore.onState("upRanking", this.getRankingHandle(3))
+
+        // 取消数据监听
+        // rankingStore.offState("newRanking", this.getRankingHandle(0))
     },
 
     // 网络请求
@@ -66,6 +73,22 @@ Page({
           const rect = res[0]
           this.setData({ swiperHeight: rect.height })
         })
-      },
+    },
+
+    getRankingHandle: function(idx) {
+       return (res) => {
+        // 如果对象为空，直接返回
+        if( Object.keys(res).length === 0) return
+        const name = res.name
+        const coverImgUrl = res.coverImgUrl
+        const playCount = res.playCount
+        const songList = res.tracks.slice(0, 3)
+        // 榜单对象
+        const rankingObj = { name, coverImgUrl, playCount, songList }
+        // 浅拷贝
+        const newRankings = {...this.data.rankings, [idx]: rankingObj}
+        this.setData( { rankings: newRankings} )
+       }
+    },
     
 })

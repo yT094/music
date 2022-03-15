@@ -36,15 +36,15 @@
     "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
-    "minifyWXML": true,
+    "minifyWXML": false,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.22.1",
+  "libVersion": "2.17.0",
   "appid": "wxbb0cee2f3baa6a12",
-  "projectname": "music",
+  "projectname": "音乐小栈",
   "debugOptions": {
     "hidedInDevtools": []
   },
