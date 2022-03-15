@@ -12,6 +12,10 @@ Component({
       type: String,
       value: "更多"
     },
+    showRight: {
+      type: Boolean,
+      value: true
+    }
   },
 
   /**
