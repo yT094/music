@@ -1,5 +1,5 @@
 // pages/home-music/index.js
-import { rankingStore } from '../../store/index'
+import { rankingStore, rankingMap } from '../../store/index'
 
 import { getBanners, getSongMenu } from '../../service/api_music'
 import queryRect from '../../utils/query-rect'
@@ -40,9 +40,6 @@ Page({
         rankingStore.onState("newRanking", this.getRankingHandle(0))
         rankingStore.onState("originRanking", this.getRankingHandle(2))
         rankingStore.onState("upRanking", this.getRankingHandle(3))
-
-        // 取消数据监听
-        // rankingStore.offState("newRanking", this.getRankingHandle(0))
     },
 
     // 网络请求
@@ -75,6 +72,27 @@ Page({
         })
     },
 
+    handleMoreClick: function() {
+        this.navigateToDetailSongsPage("hotRanking")
+    },
+    
+    handleRankingItemClick: function(event) {
+        const idx = event.currentTarget.dataset.idx
+        const rankingName = rankingMap[idx]
+        this.navigateToDetailSongsPage(rankingName)
+    },
+
+    navigateToDetailSongsPage: function(rankingName) {
+        wx.navigateTo({
+            url: `/pages/detail-songs/index?ranking=${rankingName}`,
+        })
+    },
+
+    onUnload: function () {
+        // 取消数据监听
+        // rankingStore.offState("newRanking", this.getNewRankingHandler)
+    },
+      
     getRankingHandle: function(idx) {
        return (res) => {
         // 如果对象为空，直接返回
